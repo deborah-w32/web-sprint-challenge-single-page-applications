@@ -98,8 +98,8 @@ const App = () => {
     <>
       <div className="NavLinks">
         <nav >
-          <Link id="order-pizza" to='/'>Home</Link>
-          <Link to='/pizza'>Order</Link>
+          <Link to='/'>Home</Link>
+          <Link id="order-pizza" to='/pizza'>Order</Link>
         </nav>
       </div>
       <h1>Lambda Eats</h1>
