@@ -123,7 +123,7 @@ export default function Form(props){
                     name='bellPepper'
                     type='checkbox'
                     onChange={onCheckChange}
-                    checked={formValues.s.bellPepper === true}
+                    checked={formValues.toppings.bellPepper === true}
                     />
                 </label>
                 <label>Special Instructions:
