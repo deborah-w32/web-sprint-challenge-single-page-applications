@@ -8,7 +8,7 @@ import axios from "axios";
 const initialFormValues = {
   name: '',
   pizzaSize: '',
-  topping: {
+  toppings: {
     pepperoni: false,
     sausage: false,
     mushroom: false,
@@ -42,12 +42,12 @@ const App = () => {
     }
 
   const submitForm = (event) => {
-    const filterToppings = [formValues.topping]
+    const filterToppings = [formValues.toppings]
     const yourOrder ={
       name:formValues.name.trim(),
       pizzaSize: formValues.pizzaSize,
-      topping: filterToppings.filter(
-        (choice) => formValues.topping[choice]
+      toppings: filterToppings.filter(
+        (choice) => formValues.toppings[choice]
       ),
       special:formValues.special
     }
@@ -76,7 +76,7 @@ const App = () => {
   }
 
   const checkChange = (name, isChecked) => {
-    setFormValues({...formValues, topping: {...formValues.topping, [name]: isChecked}})
+    setFormValues({...formValues, toppings: {...formValues.toppings, [name]: isChecked}})
   }
 
   const inputChange = (name, value) => {
@@ -97,8 +97,8 @@ const App = () => {
   return (
     <>
       <div className="NavLinks">
-        <nav id="order-pizza">
-          <Link to='/'>Home</Link>
+        <nav >
+          <Link id="order-pizza" to='/'>Home</Link>
           <Link to='/pizza'>Order</Link>
         </nav>
       </div>
